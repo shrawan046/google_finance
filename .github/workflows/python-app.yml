@@ -38,6 +38,5 @@ jobs:
       run: |
         pip install pytest
         pip install selenium
-        pip install 
         export PYTHONPATH=src
         pytest

@@ -5,7 +5,7 @@ from configparser import ConfigParser
 
 
 print("Current directory:", os.getcwd())
-config_path = os.environ.get('CONFIG_PATH', 'Configurations/config.ini')
+config_path = os.environ.get('CONFIG_PATH', 'google_finance/Configurations/config.ini')
 print("Config path:", config_path)
 # config = configparser.RawConfigParser()
 #config.read('Configurations/config.ini')

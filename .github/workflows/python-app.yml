@@ -29,7 +29,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - uses: actions/checkout@v3
       if: success() || failure()
-      run: |
+    - run: |
         pytest .\testcases\ --browser=chrome --html=Reports/report.html
         chmod 777 /home/runner/work/google_finance/Reports
 

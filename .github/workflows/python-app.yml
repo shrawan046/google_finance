@@ -30,11 +30,10 @@ jobs:
     - uses: actions/checkout@v3
       if: success() || failure()
     - run: |
-        mkdir -p Reports
         cd testCases
         mkdir -p Reports
-        pytest test_*.py --browser=chrome --html=google_finance/Reports/report.html
-        chmod 777 /home/runner/work/google_finance/google_finance/Reports/
+        pytest test_*.py --browser=chrome --html=Reports/report.html
+        chmod 777 /home/runner/work/google_finance/google_finance/testCases/Reports/
       env:
         CONFIG_PATH: /home/runner/work/google_finance/google_finance/Configurations/config.ini
 

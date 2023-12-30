@@ -5,9 +5,11 @@ from pagesObjects import HomePage
 from selenium.webdriver.support.ui import WebDriverWait
 from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGen
+import os
 
 
 class Test_001_Home:
+    print("Current directory:", os.getcwd())
     baseURL = ReadConfig.getAppURL()
     input = ReadConfig.variable()
 

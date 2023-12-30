@@ -3,17 +3,21 @@ import os
 from pathlib import Path
 from configparser import ConfigParser
 
+
+print("Current directory:", os.getcwd())
 config_path = os.environ.get('CONFIG_PATH', 'Configurations/config.ini')
+print("Config path:", config_path)
 # config = configparser.RawConfigParser()
 #config.read('Configurations/config.ini')
 config = ConfigParser()
 config.read(config_path)
+print("Sections:", config.sections())
 
 
 class ReadConfig:
     @staticmethod
     def getAppURL():
-        url = config.get('URL', 'baseURL')
+        url = config.get('Settings', 'baseURL')
         return url
 
     @staticmethod

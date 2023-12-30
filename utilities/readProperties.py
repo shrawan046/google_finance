@@ -9,7 +9,7 @@ config_path = os.path.join(ROOT_DIR, "config.ini")   """""
 
 config = configparser.RawConfigParser()
 #config.read(config_path)
-config.read('/Configurations/config.ini')
+config.read('Configurations/config.ini')
 
 
 class ReadConfig:

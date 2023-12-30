@@ -30,13 +30,13 @@ jobs:
     - uses: actions/checkout@v3
       if: success() || failure()
     - run: |
-        pytest .\testcases\ --browser=chrome --html=Reports/report.html
-        chmod 777 /home/runner/work/google_finance/Reports
+        pytest ./testcases/test_* --browser=chrome --html=Reports/report_new.html
+        chmod 777 /home/runner/work/google_finance/google_finance/Reports
 
     - name: set output
       if: success() || failure()
       id: results
-      run: echo "artifactPath=../Reports" >> $GITHUB_OUTPUT
+      run: echo "artifactPath=/Reports" >> $GITHUB_OUTPUT
 
     - uses: actions/upload-artifact@v3
       if: success() || failure()

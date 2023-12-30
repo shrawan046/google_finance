@@ -30,7 +30,8 @@ jobs:
     - uses: actions/checkout@v3
       if: success() || failure()
     - run: |
-        pytest /testCases/test_* --browser=chrome --html=Reports/report_new.html
+        cd testCases
+        pytest test_*.py --browser=chrome --html=Reports/report_new.html
         chmod 777 /home/runner/work/google_finance/google_finance/Reports
 
     - name: set output

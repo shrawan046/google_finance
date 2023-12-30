@@ -1,15 +1,12 @@
 import configparser
 import os
 from pathlib import Path
+from configparser import ConfigParser
 
-"""""
-path = Path(__file__)
-ROOT_DIR = path.parent.absolute()
-config_path = os.path.join(ROOT_DIR, "config.ini")   """""
-
-config = configparser.RawConfigParser()
-#config.read(config_path)
-config.read('Configurations//config.ini')
+config_path= os.environ.get('CONFIG_PATH', 'Configurations/config.ini')
+#config = configparser.RawConfigParser()
+config= ConfigParser()
+config.read('Configurations/config.ini')
 
 
 class ReadConfig:

@@ -5,8 +5,9 @@ from configparser import ConfigParser
 
 config_path = os.environ.get('CONFIG_PATH', 'Configurations/config.ini')
 # config = configparser.RawConfigParser()
+#config.read('Configurations/config.ini')
 config = ConfigParser()
-config.read('Configurations/config.ini')
+config.read(config_path)
 
 
 class ReadConfig:

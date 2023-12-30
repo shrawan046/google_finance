@@ -34,7 +34,7 @@ jobs:
         pytest test_*.py --browser=chrome --html=Reports/report_new.html
         chmod 777 /home/runner/work/google_finance/google_finance/Reports
       env:
-        CONFIG_PATH: Configurations/config.ini
+        CONFIG_PATH: /home/runner/work/google_finance/google_finance/Configurations/config.ini
 
     - name: set output
       if: success() || failure()

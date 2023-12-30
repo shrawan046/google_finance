@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 
-"""""
+
 @pytest.fixture()
 def setup(browser):
     options = Options()
@@ -19,9 +19,10 @@ def setup(browser):
         print("Launching default Browser")
     driver.maximize_window()
     driver.implicitly_wait(10)
-    return driver   """
+    return driver
 
 
+"""""
 @pytest.fixture()
 def setup(browser):
     if browser == 'chrome':
@@ -36,6 +37,7 @@ def setup(browser):
     driver.maximize_window()
     driver.implicitly_wait(10)
     return driver
+    """""
 
 
 def pytest_addoption(parser):

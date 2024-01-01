@@ -54,8 +54,6 @@ class Test_001_Home:
         self.driver.close()
 
     def test_localMarket(self, setup):
-        self.logger.info("******Test_001_Home******")
-        self.logger.info("******Verify local markets functionality******")
         self.driver = setup
         self.driver.get(self.baseURL)
         self.market = Home(self.driver)
@@ -63,8 +61,6 @@ class Test_001_Home:
         self.driver.close()
 
     def test_signIn_Click(self, setup):
-        # self.logger.info("******Test_001_Home******")
-        # self.logger.info("******Verify signin click functionality******")
         self.driver = setup
         self.driver.get(self.baseURL)
         self.signin = Home(self.driver)
@@ -77,8 +73,6 @@ class Test_001_Home:
             assert False
 
     def test_compare_markets(self, setup):
-        # self.logger.info("******Test_001_Home******")
-        # self.logger.info("******Verify compare markets functionality******")
         self.driver = setup
         self.driver.get(self.baseURL)
         self.compare_market = Home(self.driver)

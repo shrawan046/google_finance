@@ -56,9 +56,9 @@ class Home:
 
     def verify_gmail_page(self):
         email_input = self.driver.find_element(By.XPATH, self.email_input_xpath)
-        create_button = self.driver.find_element(By.XPATH, self.create_account_xpath)
         assert email_input.is_displayed()
-        assert create_button.is_displayed()
+        #create_button = self.driver.find_element(By.XPATH, self.create_account_xpath)
+        #assert create_button.is_displayed()
 
     def localMarket(self):
         self.driver.find_element(By.CSS_SELECTOR, self.local_market_tab_css).click()

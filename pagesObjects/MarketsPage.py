@@ -37,9 +37,9 @@ class Market:
     local_currency_list_xpath = "//div[2]//ul[1]"
     inr_currency_Xpath = "//div[contains(text(),'INR / JPY')]"
     inr_chat_text_xpath = "//div[@class='zzDege']"
-    compare_to_search_xpath= "//span[normalize-space()='Compare to']"
-    follow_button_xpath= "(//div[@class='ibi25b'])[1]"
-    gmail_logo_xpath= "//div[@id='logo']"
+    compare_to_search_xpath = "//span[normalize-space()='Compare to']"
+    follow_button_xpath = "(//div[@class='ibi25b'])[1]"
+    gmail_logo_xpath = "//div[@id='logo']"
 
     def __init__(self, driver):
         self.driver = driver
@@ -99,19 +99,15 @@ class Market:
             for currency in local_list:
                 if currency == "INR / JPY":
                     self.driver.find_element(By.XPATH, self.inr_currency_Xpath).click()
-                    inr_text= self.driver.find_element(By.XPATH, self.inr_chat_text_xpath)
-                    compare_to= self.driver.find_element(By.XPATH, self.compare_to_search_xpath)
+                    inr_text = self.driver.find_element(By.XPATH, self.inr_chat_text_xpath)
+                    compare_to = self.driver.find_element(By.XPATH, self.compare_to_search_xpath)
                 assert inr_text.is_displayed()
                 assert compare_to.is_displayed()
 
-
     def verify_follow(self):
-        follow_button=self.driver.find_element(By.XPATH, self.follow_button_xpath)
+        follow_button = self.driver.find_element(By.XPATH, self.follow_button_xpath)
         assert follow_button.is_displayed()
-        gmail_logo= self.driver.find_element(By.XPATH, self.gmail_logo_xpath)
-        gmail_get_url= self.driver.current_url
+        gmail_logo = self.driver.find_element(By.XPATH, self.gmail_logo_xpath)
+        gmail_get_url = self.driver.current_url
         print(gmail_get_url)
         assert gmail_logo.is_displayed()
-
-
-

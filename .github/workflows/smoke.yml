@@ -32,7 +32,7 @@ jobs:
     - run: |
         cd testCases
         mkdir -p Reports
-        pytest -v -s -m "sanity" test_*.py --browser=chrome --html=Reports/sanity_report.html
+        pytest -v -s -m "smoke" test_*.py --browser=chrome --html=Reports/sanity_report.html
         chmod 777 /home/runner/work/google_finance/google_finance/testCases/Reports/
       env:
         CONFIG_PATH: /home/runner/work/google_finance/google_finance/Configurations/config.ini

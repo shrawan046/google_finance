@@ -23,7 +23,7 @@ class Home:
     itc_text_xpath = "//div[@role='heading'][normalize-space()='ITC Ltd']"
     airtel_text_xpath = "//div[normalize - space() = 'Airtel Africa PLC']"
     email_input_xpath = "//input[@id='identifierId']"
-    create_account_xpath = "//span[normalize-space()='Create account']"
+    create_account_xpath = "//span[contains(text(),'Create account')]"
     share_popup_xpath = "//div[@class='VfPpkd-cnG4Wd']//section"
     facebook_button_xpath = "//button[@aria-label='Share to Facebook']"
 

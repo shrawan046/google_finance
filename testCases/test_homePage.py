@@ -15,7 +15,7 @@ class Test_001_Home:
 
     logger = LogGen.loggen()
 
-    @pytest.mark.sanity
+    @pytest.mark.smoke
     def test_homePageTitle(self, setup):
         self.logger.info("******Test_001_Home******")
         self.logger.info("******Verify url functionality******")
@@ -29,7 +29,7 @@ class Test_001_Home:
         else:
             assert False
 
-    @pytest.mark.sanity
+    @pytest.mark.smoke
     def test_search_follow(self, setup):
         self.logger.info("******Test_001_Home******")
         self.logger.info("******Verify search string functionality******")
@@ -41,7 +41,7 @@ class Test_001_Home:
         self.follow.verify_gmail_page()
         self.driver.close()
 
-    @pytest.mark.sanity
+    @pytest.mark.smoke
     def test_search_share(self, setup):
         self.logger.info("******Test_001_Home******")
         self.logger.info("******Verify search string functionality******")

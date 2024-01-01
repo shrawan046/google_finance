@@ -14,7 +14,7 @@ class Test_002_Market:
     input = ReadConfig.variable()
     logger = LogGen.loggen()
 
-    @pytest.mark.sanity
+    @pytest.mark.smoke
     def test_click_on_mainMenu(self, setup):
         self.driver = setup
         self.driver.get(self.baseURL)
@@ -24,7 +24,7 @@ class Test_002_Market:
         print(act_title)
         self.driver.close()
 
-    @pytest.mark.sanity
+    @pytest.mark.smoke
     def test_click_on_most_active(self, setup):
         self.driver = setup
         self.driver.get(self.baseURL)
